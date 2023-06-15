@@ -1,2 +1,2 @@
 # finance-web-app
-Finance trading simulation website where you can manage stocks and learn about equity finance. 
+Stock trading simulation website where you can manage stocks, which is built on Flask. 
