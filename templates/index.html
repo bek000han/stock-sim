@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <table class="table" style="width:80%; margin:auto">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th><strong>TOTAL</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in values %}
+                {% if stock["sum(shares)"] > 0 %}
+                <tr>
+                    <td> {{ stock["symbol"] }} </td>
+                    <td> {{ stock["name"] }} </td>
+                    <td> {{ stock["sum(shares)"] }} </td>
+                    <td> ${{ stock["price"] }} </td>
+                    <td> ${{ '%0.2f' | format(stock["price"] * stock["sum(shares)"] | float) }} </td>
+                </tr>
+                {% endif %}
+            {% endfor %}
+            <tr style="border-style:hidden, border-top-style:visible">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td> <strong>Cash in Account</strong> </td>
+                <td> ${{ '%0.2f' | format(funds[0]["cash"] | float) }} </td>
+            </tr>
+            <tr style="border-style:hidden">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td> <strong>TOTAL</strong> </td>
+                <td> ${{ total }} </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
