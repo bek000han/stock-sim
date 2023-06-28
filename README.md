@@ -4,7 +4,7 @@
 
 ### **Installation**:
 
-### **Play Instructions**:
+### **Usage Instructions**:
 
 ### **Present Issues**:
 
