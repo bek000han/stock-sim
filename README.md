@@ -17,8 +17,9 @@ To run the finance web application locally, follow these steps:
 
 - Set the API key for the IEX Cloud API:
   - Sign up for an account at IEX Cloud at https://iexcloud.io/
-  - Retrieve your API key from the account dashboard.
-  - Set the API key as an environment variable with the name "API_KEY".
+  - Copy your API key from the account dashboard.
+  - Paste the copied value into the terminal as follows:
+  > $ export API_KEY=value
 
 - Run the Flask application:
 > $ flask run
