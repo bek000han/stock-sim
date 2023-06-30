@@ -50,9 +50,9 @@ Once the finance web application is running, you can perform the following actio
 - Input Validation: The application may accept invalid or incorrect inputs in certain cases. For example, no extensive testing was done on stock symbol validation as the API is very large.
 
 ### **Future Plans**:
+- IMPORTANT: Overhaul the symbol lookup system and change the API from IEX Cloud to Yahoo Finance instead. IEX introduced changes to their free plan, making it difficult to maintain the code.
 - Improved Error Handling: Enhance the error handling mechanism to provide more informative and user-friendly error messages when issues occur during user interactions or API requests.
 - Additional Features: Implement new features such as portfolio management, real-time stock charts, and news integration to provide users with a more comprehensive stock trading experience.
-- Overhaul the symbol lookup system and change the API from IEX Cloud to Yahoo Finance instead.
 
 ### **Contributing**:
 Contributions to the project are welcome and encouraged! If you find any issues or have suggestions for improvement, please open an issue or submit a pull request.
